@@ -5,7 +5,7 @@ exports.main_handler = async (event, context, callback) => {
     if (event["TriggerName"] == 'remote') {
         console.log('remote触发:', event["Message"])
         const got = require('got')
-        const links = ['https://github.com/kong12345678/jd_script_kongkong/main/','https://github.com/kong12345678/jd_script_kongkong/main/']
+        const links = ['https://raw.fastgit.org/zero205/JD_tencent_scf/main/','https://raw.githubusercontent.com/zero205/JD_tencent_scf/main/']
         for (let i = 0; i < links.length; i++) {
             try {
                 const { body } = await got(`${links[i]}${event["Message"]}.js`, {
